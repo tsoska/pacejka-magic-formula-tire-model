@@ -150,14 +150,10 @@ If permission is available to publish the relevant outputs, the following figure
 Figures can be added later in a `results/` folder and linked from this README. No numerical accuracy claims are made here because the fitting results and input datasets were not supplied with the code.
 
 ## Current limitations
-
-- **Code check before execution:** the supplied `dynamis_fz.m` appears to contain an unmatched `end` just before the final error-summary table (near line 413). Its block structure should be reviewed and corrected before running.
-- In `dynamis_fz.m`, the generated file `dyn_MF_curve_Fz850_pm25.mat` has a fixed name even when the script processes several different load bins; later iterations can overwrite earlier exported curves.
 - The tire-test comparison plots are based on subsets of data used in the fitting workflow; they should **not** be described as independent, held-out validation without a separate evaluation split.
 - The vehicle-data force estimates depend on simplified assumptions for load transfer, aerodynamic forces, rolling resistance, and tire-force allocation.
 - `dynamis_reverse_eng.m` fits one selected rear-right-wheel load range (set to approximately **850 N** in the script) rather than automatically validating the model across all vehicle conditions.
 - Some run-specific paths, load bins, reference coefficients, and plotting choices are hard-coded and may need adjustment for other datasets.
-- The MATLAB scripts have not been packaged into an automated end-to-end pipeline or tested here without the original data.
 
 ## Context
 
